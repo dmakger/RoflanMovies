@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.SignUpScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-52dp"
+        android:src="@drawable/board"
+
+        app:layout_constraintBottom_toTopOf="@id/clMain" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_recycler_top"
+        android:paddingLeft="45dp"
+        android:paddingTop="50dp"
+        android:paddingRight="48dp"
+        android:paddingBottom="80dp"
+
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/nunito"
+            android:text="Login"
+            android:textColor="@color/dark_text"
+            android:textSize="15sp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/nunito"
+            android:hint="dmakger"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dark_text"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/txtLogin"
+            app:layout_marginBaseline="12dp" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/nunito"
+            android:text="E-mail"
+            android:textColor="@color/dark_text"
+            android:textSize="15sp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etLogin" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/nunito"
+            android:hint="deliver@mail.ru"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dark_text"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/txtEmail"
+            app:layout_marginBaseline="12dp" />
+
+        <TextView
+            android:id="@+id/txtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/nunito"
+            android:text="Password"
+            android:textColor="@color/dark_text"
+            android:textSize="15sp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/nunito"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:letterSpacing="0.2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dark_text"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/txtPassword"
+            app:layout_marginBaseline="12dp" />
+
+        <TextView
+            android:id="@+id/txtRepeatPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/nunito"
+            android:text="Repeat Password"
+            android:textColor="@color/dark_text"
+            android:textSize="15sp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+        <EditText
+            android:id="@+id/etRepeatPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/nunito"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:letterSpacing="0.2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dark_text"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/txtRepeatPassword"
+            app:layout_marginBaseline="12dp" />
+
+        <Button
+            android:id="@+id/btnSignInAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="59dp"
+            android:background="@drawable/button_orange"
+            android:fontFamily="@font/nunito_bold"
+            android:onClick="onSignUpClickAction"
+            android:paddingVertical="16dp"
+            android:text="Вход"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRepeatPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
